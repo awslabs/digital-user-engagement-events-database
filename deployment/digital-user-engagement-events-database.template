@@ -100,6 +100,9 @@ Resources:
             reason: Not public facing.
     Properties:
       BucketName: !Ref CreateBucketName
+      OwnershipControls:
+        Rules:
+         - ObjectOwnership: BucketOwnerPreferred
       PublicAccessBlockConfiguration:
         BlockPublicAcls: True
         BlockPublicPolicy: True
@@ -160,6 +163,9 @@ Resources:
             reason: This is the log bucket.
     Properties:
       AccessControl: LogDeliveryWrite
+      OwnershipControls:
+        Rules:
+         - ObjectOwnership: BucketOwnerPreferred
       PublicAccessBlockConfiguration:
         BlockPublicAcls: True
         BlockPublicPolicy: True
