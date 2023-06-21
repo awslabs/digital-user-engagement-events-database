@@ -32,13 +32,26 @@ Mappings:
   MetricsMap:
     Send-Data:
       ID: SO0105
-      Version: "%%VERSION%%"
+      Version: "v1.0.0"
       SendAnonymousData: "Yes" # change to 'No' if needed
 
   SourceCode:
     General:
-      S3Bucket: "%%BUCKET_NAME%%"
-      KeyPrefix: "%%SOLUTION_NAME%%/%%VERSION%%"
+      S3Bucket: "solutions"
+      KeyPrefix: "digital-user-engagement-events-database/v1.0.0"
+  
+  #By default this CloudFormation template retrieves the AWS Lambda source code for the CustomBucket & CustomResource helper functions from an AWS managed S3 bucket. If you wish to use the AWS Lambda code in this GitHub repository and host it in your own Amazon S3 bucket, you can un-comment the two resources below (MetricsMap and SourceCode) and follow the GitHub ReadMe instructions.
+
+#  MetricsMap:
+#    Send-Data:
+#      ID: SO0105
+#      Version: "%%VERSION%%"
+#      SendAnonymousData: "Yes" # change to 'No' if needed
+
+#  SourceCode:
+#    General:
+#      S3Bucket: "%%BUCKET_NAME%%"
+#      KeyPrefix: "%%SOLUTION_NAME%%/%%VERSION%%"
 
   LambdaRuntime:
     Language:
