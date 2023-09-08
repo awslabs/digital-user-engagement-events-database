@@ -55,7 +55,7 @@ Mappings:
 
   LambdaRuntime:
     Language:
-      Python: python3.7
+      Python: python3.8
 
 Metadata:
   AWS::CloudFormation::Interface:
